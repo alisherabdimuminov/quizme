@@ -4,7 +4,7 @@
         <div>
             <input type="text" class="w-full block border border-slate-900/10 rounded-md py-1 px-3 outline-none" placeholder="Search">
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 mt-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 mt-10 gap-5">
             <NuxtLink 
                 v-for="(quiz, index) in data.quizzes" :key="index" 
                 :to="{name: 'quiz-id', params: {id: quiz.id}}"

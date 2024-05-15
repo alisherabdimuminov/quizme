@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-blue-300/10 h-full p-5 md:px-20">
+    <div class="bg-blue-300/10 h-full overflow-auto p-5 md:px-20 mb-5">
         <div v-if="data.loading" class="loader"></div>
         <p class="text-center text-xl">{{ data.quiz.name }}</p> <br>
         <div v-for="(question, index) in data.quiz.questions" :key="index">
