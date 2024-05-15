@@ -41,7 +41,7 @@ const data = reactive({
 
 onMounted(async () => {
     data.loading = true
-    let response: [] = await $fetch("http://127.0.0.1:8000/quizzes/", {
+    let response: [] = await $fetch("https://quizmenuxt.pythonanywhere.com/quizzes/", {
         headers: {
             'Authorization': `Token ${getUser.value.user?.token}`
         }

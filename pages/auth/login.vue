@@ -35,7 +35,7 @@ const data = reactive({
 
 const login = async () => {
     try {
-        let response: object = await $fetch("http://localhost:8000/quizzes/login/", {
+        let response: object = await $fetch("http://quizmenuxt.pythonanywhere.com/quizzes/login/", {
             method: "POST",
             body: JSON.stringify({
                 username: data.username,

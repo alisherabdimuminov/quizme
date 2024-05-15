@@ -59,7 +59,7 @@ const data = reactive({
 onMounted(async () => {
     data.loading = true
     try {
-        let response: [] = await $fetch(`http://127.0.0.1:8000/quizzes/quiz/${route.params.id}/`, {
+        let response: [] = await $fetch(`http://quizmenuxt.pythonanywhere.com/quizzes/quiz/${route.params.id}/`, {
             headers: {
                 'Authorization': `Token ${getUser.value.user?.token}`
             }
@@ -76,9 +76,9 @@ onMounted(async () => {
 const send = async () => {
     try {
         data.loading = true;
-        let response: [] = await $fetch(`http://127.0.0.1:8000/quizzes/quiz/${route.params.id}/check/`, {
+        let response: [] = await $fetch(`http://quizmenuxt.pythonanywhere.com/quizzes/quiz/${route.params.id}/check/`, {
             headers: {
-                'Authorization': 'Token 6bb82644e157161b48b619b4e4a02296a245d708'
+                'Authorization': `Token ${getUser.value.user?.token}`
             },
             method: "POST",
             body: JSON.stringify({
